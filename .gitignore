@@ -1,0 +1,15 @@
+# Byte-compiled / generated files
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# SQLite database
+db.sqlite3
+
+# Environment variables
+.env
+
+# Static files generated at runtime
+/staticfiles/

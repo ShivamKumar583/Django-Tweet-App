@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tweet Page
+{% endblock %}
+
+{% block content %}
+    <h1 class=' text-white text-center text-3xl'>Welcome to new Tweet App created with django</h1>
+    
+    <h2 class=' m-3 text-white bg-slate-600 w-fit mx-auto text-center text-xl p-2 rounded-md'>
+        {% if form.instance.pk %}
+        Edit Tweet
+        {% else %}
+        Create Tweet
+        {% endif %}
+    </h2>
+{% endblock %}
