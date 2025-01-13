@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tweet Page
+{% endblock %}
+
+{% block content %}
+    <h1 class=' text-white text-center text-3xl'>Logged Out</h1>
+
+        <p>You have been logged out. <a href="{% url 'login' %}">Login here</a></p>
+{% endblock %}

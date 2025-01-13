@@ -7,11 +7,18 @@
 {% block content %}
     <h1 class=' text-white text-center text-3xl'>Welcome to new Tweet App created with django</h1>
     
-    <h2 class=' m-3 text-white bg-slate-600 w-fit mx-auto text-center text-xl p-2 rounded-md'>
+    <h2>
         {% if form.instance.pk %}
         Edit Tweet
         {% else %}
         Create Tweet
         {% endif %}
+
+        <form method="post" enctype='multipart/form-data' class='form'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class='btn btn-warning' type='submit'>Submit</button>
+        </form>
+        <a href="{% url 'tweet_list' %}"> Back to tweet list</a>
     </h2>
 {% endblock %}
